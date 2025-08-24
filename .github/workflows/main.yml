@@ -22,6 +22,8 @@ jobs:
       #装SDK35
       - name: Install Android SDK 35
         run: |
+          export ANDROID_HOME=$HOME/Library/Android/sdk
+          export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH
           yes | sdkmanager "platforms;android-35" "build-tools;35.0.0"
       # APK签名设置
       - name: Download Android keystore
