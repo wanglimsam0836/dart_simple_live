@@ -1,7 +1,14 @@
 buildscript {
-    ext.kotlin_version = '1.8.22'
+   ext.kotlin_version = '1.8.22'
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.android.tools.build:gradle:7.4.2" // 如果你用的是 Android Gradle Plugin
     }
 }
 allprojects {
